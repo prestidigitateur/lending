@@ -25,4 +25,9 @@
     target: '#sideNav'
   });
 
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+
 })(jQuery); // End of use strict
