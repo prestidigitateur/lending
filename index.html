@@ -52,28 +52,31 @@
             <a class="nav-link js-scroll-trigger" href="#index">Index</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#yaMetrika">yaMetrika</a>
+            <a class="nav-link js-scroll-trigger" href="#yaMetrika">Yandex Metrica</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#feedback">feedback</a>
+            <a class="nav-link js-scroll-trigger" href="#feedback">Feedback</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#galery">galery</a>
+            <a class="nav-link js-scroll-trigger" href="#galery">Galery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#slideShow">slideShow</a>
+            <a class="nav-link js-scroll-trigger" href="#slideShow">Slideshow</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#video">video</a>
+            <a class="nav-link js-scroll-trigger" href="#video">Video</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#animation">animation</a>
+            <a class="nav-link js-scroll-trigger" href="#order">Order</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#yaMap">yaMap</a>
+            <a class="nav-link js-scroll-trigger" href="#yaMap">Yandex map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#dateTime">dateTime</a>
+            <a class="nav-link js-scroll-trigger" href="#dateTime">Date</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#sitesLink">Others sites</a>
           </li>
         </ul>
       </div>
@@ -90,40 +93,10 @@
             <a href="mailto:Montgomery-gc@yandex.ru">Montgomery-gc@yandex.ru</a>
           </div>
           <p class="mb-5">The page is made for obtaining a test on the discipline of web technology. No more.</p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
+
+          <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+          <script src="https://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2" data-services="vkontakte,facebook,gplus,telegram" data-counter=""></div>
         </div>
       </section>
 
@@ -145,7 +118,7 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="feedback">
         <div class="my-auto">
           <h2 class="mb-5">feedback</h2>
-          <form action="" method="post">
+          <form action="feedback.html" method="post">
             <div class="form-group">
                <label for="name">Your name:</label>
                <input type="name" name="name" class="form-control" id="name" placeholder="Name">
@@ -215,13 +188,142 @@
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="animation">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="order">
+        <div class="my-auto">
+          <h2 class="mb-5">Order</h2>
+          <p class="mb-5">If you want to order a similar site, please send a request and in the nearest time we will contact you.</p>
+          <p id="timer" class="mb-5"></p>
+            <form action="order.html" method="post">
+            <div class="form-group">
+              <label for="name">Your name:</label>
+              <input type="name" name="name" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="email2">E-mail:</label>
+              <input type="email" name="email" class="form-control" id="email2" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="message">Request:</label>
+              <textarea class="form-control" name="message" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="captcha" id="captchaOperation">Answer: </label>
+              <input type="text" class="form-control" id="captcha" name="captcha" onkeyup="checkCaptcha()" />
+            </div>
+              <button id="submitOrder" type="submit" class="btn btn-send">Send request</button>
+          </form>
+
+        </div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="yaMap">
+        <div class="my-auto">
+          <h2 class="mb-5">Yandex map</h2>
+          <p class="mb-5">
+            <!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa7b880e83f7032ff722060ef746ea32bce592d72e89da517fe546e5d1b9dd6c3&amp;source=constructor" width="635" height="507" frameborder="0"></iframe>-->
+            <a href="https://yandex.ru/map-widget/v1/?um=constructor%3Aa7b880e83f7032ff722060ef746ea32bce592d72e89da517fe546e5d1b9dd6c3&amp;source=constructor" data-title="We are here" data-width="1200" data-toggle="lightbox" data-gallery="remoteload">We are here</a>
+          </p>
+        </div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="dateTime">
+        <div class="my-auto">
+          <h2 class="mb-5">Date</h2>
+          <div class="row">
+            <div class="col-4" style="max-width: 10em; max-height: 10em">
+              <svg onload="init()" xmlns="http://www.w3.org/2000/svg" aria-label="Calendar" role="img" viewBox="0 0 512 512">
+                  <script type="text/ecmascript"><![CDATA[
+                  function init() {
+                    var time = new Date();
+                    var locale = "en-gb";
+
+                    var DD   = time.getDate();
+                    var DDD  = time.toLocaleString(locale, {weekday: "long" });
+                    var MMM  = time.toLocaleString(locale, {month:   "short"}).toUpperCase();
+
+                    document.getElementById("day").textContent= DD;
+                    document.getElementById("weekday").textContent= DDD;
+                    document.getElementById("month").textContent= MMM;
+                    
+                    // var DDDD = time.toLocaleString(locale, { weekday: "long" });
+                    // var MM   = time.getMonth() + 1;
+                    // var MMMM = time.toLocaleString(locale, {month: "long"});
+                    // var YYYY = time.getFullYear();
+                  }
+                  ]]></script>
+
+                  <path d="M512 455c0 32-25 57-57 57H57c-32 0-57-25-57-57V128c0-31 25-57 57-57h398c32 0 57 26 57 57z" fill="#e0e7ec"/>
+                  <path d="m484,0.69598l-456,0c-15,0 -28,13 -28,28l0,157l512,0l0,-157c0,-15 -13,-28 -28,-28z" fill="#dd2f45"/>
+
+                  <g fill="#f3aab9">
+                    <circle cx="470" cy="142" r="14"/>
+                    <circle cx="470" cy="100" r="14"/>
+                    <circle cx="427" cy="142" r="14"/>
+                    <circle cx="427" cy="100" r="14"/>
+                    <circle cx="384" cy="142" r="14"/>
+                    <circle cx="384" cy="100" r="14"/>
+                  </g>
+
+                  <text id="month" x="32" y="164" fill="#fff" font-family="monospace" font-size="140px" style="text-anchor: left">MAY</text>
+
+                  <text id="day" x="256" y="400" fill="#66757f" font-family="monospace" font-size="256px" style="text-anchor: middle">11</text>
+
+                  <text id="weekday" x="256" y="480" fill="#66757f" font-family="monospace" font-size="64px" style="text-anchor: middle">Friday</text>
+              </svg>
+            </div>
+            <div class="col-8 ">
+              <p class="mb-5">This SVG always shows today's date</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="sitesLink">
+        <div class="my-auto">
+          <h2 class="mb-5">Others sites</h2>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://html5book.ru/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-html5 fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.wikipedia.org/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-wikipedia-w fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://vk.com/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
 

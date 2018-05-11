@@ -1,3 +1,11 @@
+var timerStart = 'You have left ';
+var timerEnd = ' to order a lending page with 10% discount.';
+var target_date = new Date('Jan, 31, 2019').getTime();
+var days, hours, minutes, seconds;
+
+var captcha = {a: Math.floor((Math.random() * 100) + 1),
+            b: Math.floor((Math.random() * 100) + 1)};
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -31,4 +39,36 @@
     $(this).ekkoLightbox();
   });
 
+  //captcha
+  $('#captchaOperation').html('Please answer: ' + captcha.a + ' + ' + captcha.b);
+  $('#submitOrder').prop('disabled', true);
+
+  //timer
+  setInterval(function () {
+   
+      var current_date = new Date().getTime();
+      var seconds_left = (target_date - current_date) / 1000;
+      days = parseInt(seconds_left / 86400);
+      seconds_left = seconds_left % 86400;
+       
+      hours = parseInt(seconds_left / 3600);
+      seconds_left = seconds_left % 3600;
+       
+      minutes = parseInt(seconds_left / 60);
+      seconds = parseInt(seconds_left % 60);
+
+      $('#timer').html(timerStart + tv(days, 'Days') + tv(hours, 'Hours') + tv(minutes, 'Minutes') + tv(seconds, 'Seconds') + timerEnd);
+  }, 1000);
+
 })(jQuery); // End of use strict
+
+function tv(t, p ){
+  return '<span> <b>' + t + '</b> <i>' + p + '</i> </span>';
+}
+
+function checkCaptcha(){
+  if(captcha.a+captcha.b == $('#captcha').val())
+    $('#submitOrder').prop('disabled', false);
+  else
+    $('#submitOrder').prop('disabled', true);
+}
