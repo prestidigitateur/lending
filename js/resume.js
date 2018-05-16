@@ -58,6 +58,9 @@ var captcha = {a: Math.floor((Math.random() * 100) + 1),
       seconds = parseInt(seconds_left % 60);
 
       $('#timer').html(timerStart + tv(days, 'Days') + tv(hours, 'Hours') + tv(minutes, 'Minutes') + tv(seconds, 'Seconds') + timerEnd);
+
+      var d = new Date();
+      $('#dateTimeText').html("Now: <b>"+d.toUTCString()+"</b>");
   }, 1000);
 
 })(jQuery); // End of use strict
